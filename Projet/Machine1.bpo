@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.poIdentifier name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.poIdentifier name="HOME" org.eventb.core.type="ℙ(HOME)"/>
+<org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+<org.eventb.core.poIdentifier name="STRING" org.eventb.core.type="ℙ(STRING)"/>
+<org.eventb.core.poIdentifier name="TAB" org.eventb.core.type="ℙ(TAB)"/>
+<org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.poIdentifier name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.poIdentifier name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.poIdentifier name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.poIdentifier name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.poIdentifier name="True" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.poPredicate name="OutdoorActivatee" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="OutdoorActivatef" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="OutdoorActivateg" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="OutdoorActivateh" org.eventb.core.predicate="finite(HOME)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="OutdoorActivatei" org.eventb.core.predicate="finite(USERS)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="homes" org.eventb.core.type="ℙ(HOME)"/>
+<org.eventb.core.poIdentifier name="idHom" org.eventb.core.type="ℙ(HOME×ℤ)"/>
+<org.eventb.core.poIdentifier name="idHome" org.eventb.core.type="ℙ(USER×ℤ)"/>
+<org.eventb.core.poIdentifier name="numTel" org.eventb.core.type="ℙ(USER×STRING)"/>
+<org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTALLHYPContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×ℤ))∈(∅ ⦂ ℙ(USER)) → ℕ" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTALLHYPContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×STRING))∈(∅ ⦂ ℙ(USER)) → STRING" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTALLHYPContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="idHom'∈(∅ ⦂ ℙ(HOME)) → ℕ" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTContexz" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="idHome'" org.eventb.core.type="ℙ(USER×ℤ)"/>
+<org.eventb.core.poIdentifier name="idHom'" org.eventb.core.type="ℙ(HOME×ℤ)"/>
+<org.eventb.core.poIdentifier name="numTel'" org.eventb.core.type="ℙ(USER×STRING)"/>
+<org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="homes'" org.eventb.core.type="ℙ(HOME)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPContexz" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTIDENTContexz" org.eventb.core.poStamp="9"/>
+<org.eventb.core.poSequent name="NewUser/grd2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTHYPContex{'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="newIdHome∈ran(idHom)" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#.|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#.|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTHYPContex{'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NewUser/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTALLHYPContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="idHome{newUser ↦ newIdHome}∈USER∪{newUser} → ℕ" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poSequent#NewUser\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="NewUser/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTALLHYPContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="numTel{newUser ↦ newNum}∈USER∪{newUser} → STRING" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poSequent#NewUser\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTContex{" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="newUser" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="idHome'" org.eventb.core.type="ℙ(USER×ℤ)"/>
+<org.eventb.core.poIdentifier name="numTel'" org.eventb.core.type="ℙ(USER×STRING)"/>
+<org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="newNum" org.eventb.core.type="STRING"/>
+<org.eventb.core.poIdentifier name="newIdHome" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPContex{'" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTIDENTContex{" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="newUser∈USER ∖ users" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#.|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPContex{" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#EVTHYPContex{'" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="newIdHome∈ran(idHom)" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#.|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="newNum∈STRING" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.event#.|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Projet/Machine1.bpo|org.eventb.core.poFile#Machine1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="users⊆USER" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="idHome∈users → ℕ" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="numTel∈users → STRING" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="homes⊆HOME" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="idHom∈homes → ℕ" org.eventb.core.source="/Projet/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

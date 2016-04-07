@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="BOOLEAN"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="True"/>
+<org.eventb.core.constant name=")" org.eventb.core.identifier="False"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(BOOLEAN, {True}, {False})"/>
+<org.eventb.core.carrierSet name="+" org.eventb.core.identifier="ALARMS"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="NotActivated"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="IndoorActivated"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="OutdoorActivated"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(ALARMS, {NotActivated}, {IndoorActivated}, {OutdoorActivated})"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="USER"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(USER)"/>
+<org.eventb.core.carrierSet name="2" org.eventb.core.identifier="HOME"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(HOME)"/>
+<org.eventb.core.carrierSet name="4" org.eventb.core.identifier="STRING"/>
+<org.eventb.core.carrierSet name="5" org.eventb.core.identifier="USERS"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm6" org.eventb.core.predicate="finite(USERS)"/>
+<org.eventb.core.carrierSet name="8" org.eventb.core.identifier="TAB"/>
+<org.eventb.core.carrierSet name="9" org.eventb.core.identifier="PASSWORD"/>
+</org.eventb.core.contextFile>

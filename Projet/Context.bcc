@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(HOME)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#3" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="+" org.eventb.core.label="axm6" org.eventb.core.predicate="finite(USERS)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#7" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="ALARMS" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#+" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.scCarrierSet name="BOOLEAN" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.scConstant name="False" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.constant#)" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.scCarrierSet name="HOME" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#2" org.eventb.core.type="ℙ(HOME)"/>
+<org.eventb.core.scConstant name="IndoorActivated" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.constant#-" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.scConstant name="NotActivated" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.constant#," org.eventb.core.type="ALARMS"/>
+<org.eventb.core.scConstant name="OutdoorActivated" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.constant#." org.eventb.core.type="ALARMS"/>
+<org.eventb.core.scCarrierSet name="PASSWORD" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#9" org.eventb.core.type="ℙ(PASSWORD)"/>
+<org.eventb.core.scCarrierSet name="STRING" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#4" org.eventb.core.type="ℙ(STRING)"/>
+<org.eventb.core.scCarrierSet name="TAB" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#8" org.eventb.core.type="ℙ(TAB)"/>
+<org.eventb.core.scConstant name="True" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.constant#(" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.scCarrierSet name="USER" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.scCarrierSet name="USERS" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.carrierSet#5" org.eventb.core.type="ℙ(USERS)"/>
+</org.eventb.core.scContextFile>
