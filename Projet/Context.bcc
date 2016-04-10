@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scContextFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
 <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>

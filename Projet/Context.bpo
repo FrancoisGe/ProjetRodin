@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="9">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
 <org.eventb.core.poIdentifier name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
 <org.eventb.core.poIdentifier name="HOME" org.eventb.core.type="ℙ(HOME)"/>
@@ -15,7 +15,7 @@
 <org.eventb.core.poIdentifier name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.poIdentifier name="True" org.eventb.core.type="BOOLEAN"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Projet/Context.bpo|org.eventb.core.poFile#Context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Projet/Context.bpo|org.eventb.core.poFile#Context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#\/"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/Projet/Context.buc|org.eventb.core.contextFile#Context|org.eventb.core.axiom#1"/>

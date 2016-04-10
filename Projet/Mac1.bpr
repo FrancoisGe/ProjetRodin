@@ -438,8 +438,8 @@
 <org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="AddUser/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -856,6 +856,7 @@
 <org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="address{newUser ↦ lastIdUser∗30}∈USER → ℕ1"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER">
 <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
@@ -868,19 +869,18 @@
 <org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="address{newUser ↦ lastIdUser∗30}∈USER∪{newUser} → ℕ1"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬True=False">
 <org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
 <org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
 <org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="address{newUser ↦ lastIdUser∗20}∈USER∪{newUser} → ℕ1"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})">
 <org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
 <org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="address{newUser ↦ lastIdUser∗20}∈USER → ℕ1"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="BOOLEAN={True,False}">
 <org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
 <org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
@@ -901,9 +901,9 @@
 <org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -1118,9 +1118,9 @@
 <org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
 <org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="HOME">
 <org.eventb.core.lang name="L"/>
@@ -1955,5 +1955,413 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv13/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BOOLEAN,{True},{False}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬NotActivated=IndoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="homes⊆HOME">
+<org.eventb.core.prIdent name="HOME" org.eventb.core.type="ℙ(HOME)"/>
+<org.eventb.core.prIdent name="homes" org.eventb.core.type="ℙ(HOME)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬True=False">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ALARMS={NotActivated,IndoorActivated,OutdoorActivated}">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="BOOLEAN={True,False}">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬NotActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬IndoorActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BOOLEAN,{True},{False}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬NotActivated=IndoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬True=False">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALARMS={NotActivated,IndoorActivated,OutdoorActivated}">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×ℤ))∈(∅ ⦂ ℙ(USER)) → ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BOOLEAN={True,False}">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬NotActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬IndoorActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AddUser/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BOOLEAN,{True},{False}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="idUser" org.eventb.core.type="ℙ(USER×ℤ)"/>
+<org.eventb.core.prIdent name="lastIdUser" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="newUser" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="homes⊆HOME">
+<org.eventb.core.prIdent name="HOME" org.eventb.core.type="ℙ(HOME)"/>
+<org.eventb.core.prIdent name="homes" org.eventb.core.type="ℙ(HOME)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALARMS={NotActivated,IndoorActivated,OutdoorActivated}">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER">
+<org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="newNum∈STRING">
+<org.eventb.core.prIdent name="STRING" org.eventb.core.type="ℙ(STRING)"/>
+<org.eventb.core.prIdent name="newNum" org.eventb.core.type="STRING"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="idUser{newUser ↦ lastIdUser}∈USER∪{newUser} → ℕ1"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬NotActivated=IndoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="idUser{newUser ↦ lastIdUser}∈USER → ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬True=False">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BOOLEAN={True,False}">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬NotActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬IndoorActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AddHome/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="HOME">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BOOLEAN,{True},{False}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="idHome" org.eventb.core.type="ℙ(HOME×ℤ)"/>
+<org.eventb.core.prIdent name="lastIdHome" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="newHome" org.eventb.core.type="HOME"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="homes⊆HOME">
+<org.eventb.core.prIdent name="homes" org.eventb.core.type="ℙ(HOME)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALARMS={NotActivated,IndoorActivated,OutdoorActivated}">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="newPassword∈PASSWORD">
+<org.eventb.core.prIdent name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+<org.eventb.core.prIdent name="newPassword" org.eventb.core.type="PASSWORD"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="idHome{newHome ↦ lastIdHome+1}∈HOME∪{newHome} → ℕ1"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬NotActivated=IndoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬True=False">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="idHome{newHome ↦ lastIdHome+1}∈HOME → ℕ1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BOOLEAN={True,False}">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬NotActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬IndoorActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AddHome/inv14/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="HOME,PASSWORD">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BOOLEAN,{True},{False}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="newHome" org.eventb.core.type="HOME"/>
+<org.eventb.core.prIdent name="newPassword" org.eventb.core.type="PASSWORD"/>
+<org.eventb.core.prIdent name="passwordHome" org.eventb.core.type="ℙ(HOME×PASSWORD)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="homes⊆HOME">
+<org.eventb.core.prIdent name="homes" org.eventb.core.type="ℙ(HOME)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALARMS={NotActivated,IndoorActivated,OutdoorActivated}">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passwordHome{newHome ↦ newPassword}∈HOME∪{newHome} → PASSWORD"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="newPassword∈PASSWORD"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passwordHome{newHome ↦ newPassword}∈HOME → PASSWORD"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬NotActivated=IndoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬True=False">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(ALARMS,{NotActivated},{IndoorActivated},{OutdoorActivated})">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="BOOLEAN={True,False}">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬NotActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="NotActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(BOOLEAN,{True},{False})">
+<org.eventb.core.prIdent name="BOOLEAN" org.eventb.core.type="ℙ(BOOLEAN)"/>
+<org.eventb.core.prIdent name="False" org.eventb.core.type="BOOLEAN"/>
+<org.eventb.core.prIdent name="True" org.eventb.core.type="BOOLEAN"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬IndoorActivated=OutdoorActivated">
+<org.eventb.core.prIdent name="ALARMS" org.eventb.core.type="ℙ(ALARMS)"/>
+<org.eventb.core.prIdent name="IndoorActivated" org.eventb.core.type="ALARMS"/>
+<org.eventb.core.prIdent name="OutdoorActivated" org.eventb.core.type="ALARMS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

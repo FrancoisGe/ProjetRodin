@@ -14,7 +14,7 @@
 <org.eventb.core.action name="3" org.eventb.core.assignment="lastIdHome ≔ 0" org.eventb.core.label="act13"/>
 <org.eventb.core.action name="4" org.eventb.core.assignment="passwordHome ≔ ∅" org.eventb.core.label="act14"/>
 </org.eventb.core.event>
-<org.eventb.core.variable name="(" org.eventb.core.identifier="users"/>
+<org.eventb.core.variable name="(" org.eventb.core.comment="sous-ensemble de USER" org.eventb.core.identifier="users"/>
 <org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="users ⊆ USER "/>
 <org.eventb.core.variable name="*" org.eventb.core.identifier="numTel"/>
 <org.eventb.core.invariant name="+" org.eventb.core.label="inv2" org.eventb.core.predicate="numTel ∈ users → STRING" org.eventb.core.theorem="true"/>
@@ -27,21 +27,21 @@
 <org.eventb.core.action name="," org.eventb.core.assignment="numTel(newUser) ≔ newNum" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="lastIdUser ≔ lastIdUser + 1" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="idUser(newUser)≔ lastIdUser" org.eventb.core.label="act4"/>
-<org.eventb.core.action name="0" org.eventb.core.assignment="address(newUser)≔lastIdUser∗20" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="address(newUser)≔lastIdUser∗30" org.eventb.core.label="act5"/>
 <org.eventb.core.action name="1" org.eventb.core.assignment="lengthTabIdHome(newUser)≔0" org.eventb.core.label="act6"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="-" org.eventb.core.target="Context"/>
-<org.eventb.core.variable name="/" org.eventb.core.identifier="lastIdUser"/>
+<org.eventb.core.variable name="/" org.eventb.core.comment="le dernière id donné a un utilisateur" org.eventb.core.identifier="lastIdUser"/>
+<org.eventb.core.variable name="1" org.eventb.core.comment="fonction qui renvoie id d'un utilisateur (ℕ1) et qui prend en entrée un élément de l'ensemble users" org.eventb.core.identifier="idUser"/>
 <org.eventb.core.invariant name="0" org.eventb.core.label="inv4" org.eventb.core.predicate="lastIdUser ∈ ℕ1"/>
-<org.eventb.core.variable name="1" org.eventb.core.identifier="idUser"/>
-<org.eventb.core.invariant name="2" org.eventb.core.label="inv5" org.eventb.core.predicate="idUser ∈ users → ℕ1" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv5" org.eventb.core.predicate="idUser ∈ users → ℕ1"/>
 <org.eventb.core.invariant name="4" org.eventb.core.label="inv6" org.eventb.core.predicate="tabIdUser ∈ ℕ1 → ℕ1"/>
-<org.eventb.core.variable name="9" org.eventb.core.identifier="tabIdUser"/>
+<org.eventb.core.variable name="9" org.eventb.core.comment="fonction qui renvoie l'id d'un utilisateur (ℕ1) et qui prend en entré le numéraux de l'élément recherché(ℕ1) l'ensemble des naturels est décomposé en sous-ensemble de 30 éléments(exmple l'id = 1 est relié au 30 premies éléments  " org.eventb.core.identifier="tabIdUser"/>
 <org.eventb.core.invariant name=":" org.eventb.core.label="inv7" org.eventb.core.predicate="tabIdHome ∈ ℕ1 → ℕ1"/>
 <org.eventb.core.variable name=";" org.eventb.core.identifier="tabIdHome"/>
-<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="address"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.comment="fonction qui renvoie la position du première élément d'un des sous ensemble relié a tabIdHome et il prend un users en entré" org.eventb.core.identifier="addressHome"/>
 <org.eventb.core.invariant name="?" org.eventb.core.label="inv9" org.eventb.core.predicate="address ∈ users → ℕ1 "/>
-<org.eventb.core.variable name="@" org.eventb.core.identifier="lengthTabIdHome"/>
+<org.eventb.core.variable name="@" org.eventb.core.comment="fonction qui renvoie le nombre de maison relié a un utilisateur et il prend en entrée un users" org.eventb.core.identifier="lengthTabIdHome"/>
 <org.eventb.core.invariant name="A" org.eventb.core.label="inv10" org.eventb.core.predicate="lengthTabIdHome ∈ users→ℕ1"/>
 <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ConnectHome">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="addIdHome"/>
@@ -51,11 +51,11 @@
 <org.eventb.core.action name="," org.eventb.core.assignment="lengthTabIdHome(addUser)≔lengthTabIdHome(addUser)+1" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="addUser ∈ users"/>
 </org.eventb.core.event>
-<org.eventb.core.variable name="C" org.eventb.core.identifier="homes"/>
+<org.eventb.core.variable name="C" org.eventb.core.comment="sous-ensemlbe de HOME" org.eventb.core.identifier="homes"/>
 <org.eventb.core.invariant name="D" org.eventb.core.label="inv11" org.eventb.core.predicate="homes ⊆ HOME"/>
-<org.eventb.core.variable name="E" org.eventb.core.identifier="idHome"/>
+<org.eventb.core.variable name="E" org.eventb.core.comment="fonction qui renvoie id d'une maison (ℕ1) et qui prend en entrée un élément de l'ensemble homes" org.eventb.core.identifier="idHome"/>
 <org.eventb.core.invariant name="F" org.eventb.core.label="inv12" org.eventb.core.predicate="idHome ∈ homes → ℕ1"/>
-<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addHome">
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddHome">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="newHome"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="newPassword"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="newHome ∈ HOME ∖ homes"/>
@@ -64,8 +64,8 @@
 <org.eventb.core.action name="," org.eventb.core.assignment="passwordHome(newHome)≔ newPassword" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="idHome(newHome)≔ lastIdHome + 1" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
-<org.eventb.core.variable name="H" org.eventb.core.identifier="lastIdHome"/>
+<org.eventb.core.variable name="H" org.eventb.core.comment="le dernière id donné a une maison" org.eventb.core.identifier="lastIdHome"/>
 <org.eventb.core.invariant name="I" org.eventb.core.label="inv13" org.eventb.core.predicate="lastIdHome ∈ ℕ1" org.eventb.core.theorem="true"/>
-<org.eventb.core.variable name="J" org.eventb.core.identifier="passwordHome"/>
+<org.eventb.core.variable name="J" org.eventb.core.comment="fonction qui renvoie le mot de passe (PASSWORD) et qui prend en entré un élément de homes" org.eventb.core.identifier="passwordHome"/>
 <org.eventb.core.invariant name="K" org.eventb.core.label="inv14" org.eventb.core.predicate="passwordHome ∈ homes → PASSWORD"/>
 </org.eventb.core.machineFile>

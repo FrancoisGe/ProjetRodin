@@ -18,4 +18,5 @@
 <org.eventb.core.axiom name="7" org.eventb.core.label="axm6" org.eventb.core.predicate="finite(USERS)"/>
 <org.eventb.core.carrierSet name="8" org.eventb.core.identifier="TAB"/>
 <org.eventb.core.carrierSet name="9" org.eventb.core.identifier="PASSWORD"/>
+<org.eventb.core.extendsContext name=":"/>
 </org.eventb.core.contextFile>
